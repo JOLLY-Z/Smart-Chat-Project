@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CellMain</class>
+ <widget class="QWidget" name="CellMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>999</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>聊天主界面</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolButton#addFriend{border:none;background-color:rgb(84,92,100);color:white;min-height:55px;font:14px &quot;黑体&quot;;
+padding-left:12px;
+}
+QToolButton#deleteFriend{border:none;background-color:rgb(84,92,100);color:white;min-height:55px;font:14px &quot;黑体&quot;;
+padding-left:12px;
+}
+QToolButton#applyFriend{border:none;background-color:rgb(84,92,100);color:white;min-height:55px;font:14px &quot;黑体&quot;;
+padding-left:12px;
+}
+QWidget {
+    background-color: #fff; /* 背景色 */
+    color: #333; /* 文字颜色 */
+    border: 1px solid #ccc; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 5px; /* 内边距 */
+}
+QWidget{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(251,102,102, 220), stop:1 rgba(20,196,188, 230));
+	border:none;
+	border-radius:10px;
+}
+
+QInputDialog {  
+    background-color: #f0f0f0; /* 背景颜色 */  
+    border: 1px solid #ccc; /* 边框 */  
+    border-radius: 5px; /* 边框圆角 */  
+    font-family: &quot;Arial&quot;, sans-serif; /* 字体 */  
+    font-size: 12px; /* 字体大小 */  
+}  
+  
+QInputDialog QLineEdit {  
+    padding: 5px; /* 输入框内边距 */  
+    border: 1px solid #999; /* 输入框边框 */  
+    border-radius: 3px; /* 输入框边框圆角 */  
+    selection-background-color: #ddd; /* 选中文字背景颜色 */  
+}  </string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>101</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <widget class="QToolButton" name="addFriend">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>91</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>添加好友</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/addfriend.png</normaloff>:/addfriend.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="deleteFriend">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>91</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>删除好友</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/deleteFriend.png</normaloff>:/deleteFriend.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="applyFriend">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>91</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>好友申请</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/applyFriend.png</normaloff>:/applyFriend.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>411</y>
+      <width>91</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="headerl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>头像</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前账号为：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="account">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>账号</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="friendsitem">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>91</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QToolButton{border:none;background-color:rgb(84,92,100);color:white;min-height:55px;font:14px &quot;黑体&quot;;
+padding-left:12px;
+}</string>
+    </property>
+    <property name="text">
+     <string>好友申请</string>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/wechatfriend.png</normaloff>:/wechatfriend.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>0</y>
+     <width>181</width>
+     <height>671</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>0</y>
+     <width>731</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="page"/>
+   <widget class="QWidget" name="page_2"/>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
